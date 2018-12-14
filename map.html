@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/loader.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center sticky-top">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a href="resume.html" class="nav-link">Резюме</a>
+            </li>
+            <li class="nav-item">
+                <a href="map.html" class="nav-link">Карта</a>
+            </li>
+            <li class="nav-item">
+                <a href="timer.html" class="nav-link">Таймер</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+
+
+    <div class="container justify-content-center" id="map" style="background-image: url('/pic/4seJ.gif')">
+
+    </div>
+
+
+    <!--initializing function for google maps api-->
+    <script>
+
+        function initMap() {
+
+            var pos = {lat: 56.741488, lng: 37.223369};
+
+            // Обязательные опции с которыми будет проинициализированна карта
+            var opt = {
+                center: pos,
+                zoom: 15,
+            }
+
+            // Create a map object and specify the DOM element
+            // for display.
+            var map = new google.maps.Map(document.getElementById('map'), opt);
+
+            var marker = new google.maps.Marker({position: pos,
+                map: map,
+                title:"My house"}
+            );
+
+            var info = new google.maps.InfoWindow({
+                content: '<h3>It is my home</h3><p>Here i live and write my code</p>'
+            });
+        }
+    </script>
+
+    <!--google maps api-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCteMoQUwukeanXx5gXL7YLhlUk_YxnPh4
+    &callback=initMap" async defer></script>
+
+</body>
+</html>

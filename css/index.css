@@ -1,0 +1,36 @@
+body{
+
+}
+
+div{
+    width: 40em;
+    height: 30em;
+}
+
+.container{
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 1em;
+}
+
+/*#information{*/
+    /*margin: 10px;*/
+    /*width: 60em;*/
+    /*height: 30em;*/
+    /*outline-style: dashed;*/
+    /*outline-width: 1px;*/
+    /*-moz-outline-radius: 10px;*/
+/*}*/
+
+#photo{
+    width: 20em;
+    margin-top: 1em;
+}
+
+#skills{
+    width: 20em;
+}
+
+.container{
+    text-align: left;
+}
